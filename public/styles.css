@@ -1,32 +1,75 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 2rem;
-  background: #f9f9f9;
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
+  padding: 2rem;
+  max-width: 100%;
 }
 
-h1 {
-  color: #333;
+/* Container layout */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-}
-
-input, textarea {
+/* Headings */
+h1, h2, h3 {
+  color: #00ffd0; /* bright aqua */
   margin-bottom: 1rem;
-  padding: 0.5rem;
+  text-align: center;
 }
 
-button {
-  padding: 0.5rem;
-  background: #007BFF;
-  color: white;
+/* Buttons */
+button, .btn {
+  background-color: #00ffd0;
+  color: #000;
+  padding: 0.75rem 1.5rem;
   border: none;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background: #0056b3;
+button:hover, .btn:hover {
+  background-color: #00c9aa;
+}
+
+/* Forms */
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
 }
